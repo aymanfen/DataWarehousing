@@ -1,0 +1,179 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="486291d4-3e29-4e31-88a8-4f78b22467a7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>LLM Eval DW</ID>
+  <Name>LLM Eval DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>LLM Eval DW</DataSourceID>
+  <Schema>
+    <xs:schema id="LLM_x0020_Eval_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="LLM_x0020_Eval_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ae50217d-c228-480d-ade4-d397331b8560">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_BenchmarkDim" msprop:DbTableName="BenchmarkDim" msprop:FriendlyName="BenchmarkDim" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="8f1cebe6-8719-48c4-9048-171ae16fcfec">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="BenchmarkID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="BenchmarkID" msprop:DbColumnName="BenchmarkID" msprop:design-time-name="ea2279d5-ccd4-42d5-bbb5-680cdfcf8da3" type="xs:int" />
+                  <xs:element name="BenchmarkName" msprop:FriendlyName="BenchmarkName" msprop:DbColumnName="BenchmarkName" msprop:design-time-name="c6906709-6966-43ef-96c3-74b0b58846d4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DateDim" msprop:DbTableName="DateDim" msprop:FriendlyName="DateDim" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="fbdc6639-2717-4d40-85ca-3d4a4bc2eedb">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FullDate" msprop:FriendlyName="FullDate" msprop:DbColumnName="FullDate" msprop:design-time-name="ed6cdda8-79e6-4fee-b164-05ca02942a7c" type="xs:dateTime" />
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="051df695-6792-40fa-b5ae-d262f281aa91" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quarter" msprop:FriendlyName="Quarter" msprop:DbColumnName="Quarter" msprop:design-time-name="8d3703a8-7cd5-4360-b9fd-aa90a96311c5" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:FriendlyName="Month" msprop:DbColumnName="Month" msprop:design-time-name="70283104-f360-414c-8503-3ff8b7197ae1" type="xs:int" minOccurs="0" />
+                  <xs:element name="Week" msprop:FriendlyName="Week" msprop:DbColumnName="Week" msprop:design-time-name="5dcce856-7ae4-47b0-aaa5-69db07e715ca" type="xs:int" minOccurs="0" />
+                  <xs:element name="Day" msprop:FriendlyName="Day" msprop:DbColumnName="Day" msprop:design-time-name="68e3c356-6236-4b49-af03-68390ac44fd5" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactEVal" msprop:DbTableName="FactEVal" msprop:FriendlyName="FactEVal" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="6446ba5b-dabe-4178-93b1-5b54e423aad4">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EvalID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="EvalID" msprop:DbColumnName="EvalID" msprop:design-time-name="47e0a721-362f-4940-9522-36b00103f166" type="xs:int" />
+                  <xs:element name="EvalValue" msprop:FriendlyName="EvalValue" msprop:DbColumnName="EvalValue" msprop:design-time-name="5949f6cd-c53b-4227-a82f-a9b44f5971e4" type="xs:double" minOccurs="0" />
+                  <xs:element name="Params" msprop:FriendlyName="Params" msprop:DbColumnName="Params" msprop:design-time-name="bcf8f772-565e-4696-98db-9b170a0b16c3" type="xs:double" minOccurs="0" />
+                  <xs:element name="Co2Cost" msprop:FriendlyName="Co2Cost" msprop:DbColumnName="Co2Cost" msprop:design-time-name="c643d604-e895-4b21-a9af-733130be4c8b" type="xs:double" minOccurs="0" />
+                  <xs:element name="SubmissionDate" msprop:FriendlyName="SubmissionDate" msprop:DbColumnName="SubmissionDate" msprop:design-time-name="9afd77f7-89f0-4fe9-87e4-5e242d946802" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ModelID" msprop:FriendlyName="ModelID" msprop:DbColumnName="ModelID" msprop:design-time-name="a87baacc-538f-4621-9d02-407261b3c2cf" type="xs:int" minOccurs="0" />
+                  <xs:element name="BenchmarkID" msprop:FriendlyName="BenchmarkID" msprop:DbColumnName="BenchmarkID" msprop:design-time-name="8181f37a-7651-4493-bfe4-9adc644daf95" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_ModelDim" msprop:DbTableName="ModelDim" msprop:FriendlyName="ModelDim" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="fe6e46e6-a167-491f-8e48-39f1654476f9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ModelKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ModelKey" msprop:DbColumnName="ModelKey" msprop:design-time-name="b426a0bf-fec4-4c21-ae35-39760d7cf4d2" type="xs:int" />
+                  <xs:element name="ModelID" msprop:FriendlyName="ModelID" msprop:DbColumnName="ModelID" msprop:design-time-name="e5c6a9d6-f54f-44f6-bc59-eb6313d0ba7b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelName" msprop:FriendlyName="ModelName" msprop:DbColumnName="ModelName" msprop:design-time-name="26154dc2-3d04-4fc5-b015-e09ed1af09d8" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelPrecision" msprop:FriendlyName="ModelPrecision" msprop:DbColumnName="ModelPrecision" msprop:design-time-name="1050e663-be7a-4fb9-9070-c306b4471a14" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelType" msprop:FriendlyName="ModelType" msprop:DbColumnName="ModelType" msprop:design-time-name="b7373022-cd8e-4eeb-8679-b93f9234cd4b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelWeight" msprop:FriendlyName="ModelWeight" msprop:DbColumnName="ModelWeight" msprop:design-time-name="40a2fc23-7c00-4438-81bb-e28fb0662e88" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelArchitecture" msprop:FriendlyName="ModelArchitecture" msprop:DbColumnName="ModelArchitecture" msprop:design-time-name="dffaca0a-3bda-4a45-aa0a-1d95091b281a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ModelAvgScore" msprop:FriendlyName="ModelAvgScore" msprop:DbColumnName="ModelAvgScore" msprop:design-time-name="42900c2d-4812-4ef6-bfc0-4937fa169b83" type="xs:double" minOccurs="0" />
+                  <xs:element name="ModelLicense" msprop:FriendlyName="ModelLicense" msprop:DbColumnName="ModelLicense" msprop:design-time-name="61414869-3d17-49af-8f6f-d0458660477d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsCurrent" msprop:FriendlyName="IsCurrent" msprop:DbColumnName="IsCurrent" msprop:design-time-name="a4bacd41-c02b-4fae-983b-28614e4c13e3" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_BenchmarkDim" />
+          <xs:field xpath="BenchmarkID" />
+        </xs:unique>
+        <xs:unique name="dbo_DateDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DateDim" />
+          <xs:field xpath="FullDate" />
+        </xs:unique>
+        <xs:unique name="dbo_FactEVal_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactEVal" />
+          <xs:field xpath="EvalID" />
+        </xs:unique>
+        <xs:unique name="dbo_ModelDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ModelDim" />
+          <xs:field xpath="ModelKey" />
+        </xs:unique>
+        <xs:keyref name="FK_FactEval_Model" refer="dbo_ModelDim_Constraint1">
+          <xs:selector xpath=".//dbo_FactEVal" />
+          <xs:field xpath="ModelID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactEval_Benchmark" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactEVal" />
+          <xs:field xpath="BenchmarkID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactEval_Date" refer="dbo_DateDim_Constraint1">
+          <xs:selector xpath=".//dbo_FactEVal" />
+          <xs:field xpath="SubmissionDate" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <LLM_x0020_Eval_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

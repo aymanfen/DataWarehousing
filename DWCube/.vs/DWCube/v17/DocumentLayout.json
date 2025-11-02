@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\DW\\DWCube\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F39ED82-A84D-98E6-736B-9457A2FD60A0}|DWCube.dwproj|C:\\Projects\\DW\\DWCube\\LLM Eval DW.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{3F39ED82-A84D-98E6-736B-9457A2FD60A0}|DWCube.dwproj|solutionrelative:LLM Eval DW.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LLM Eval DW.cube [Design]",
+              "DocumentMoniker": "C:\\Projects\\DW\\DWCube\\LLM Eval DW.cube",
+              "RelativeDocumentMoniker": "LLM Eval DW.cube",
+              "ToolTip": "C:\\Projects\\DW\\DWCube\\LLM Eval DW.cube [Design]",
+              "RelativeToolTip": "LLM Eval DW.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-17T08:44:26.354Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
