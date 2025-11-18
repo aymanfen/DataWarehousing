@@ -1,11 +1,11 @@
-# 📦 LLM Evaluation Data Warehousing & Analytics
+# LLM Evaluation Data Warehousing & Analytics
 
-## 📌 Project Summary  
+## Project Summary  
 This project leverages the **Microsoft BI stack (SQL Server, SSIS, SSAS, Power BI)** to build a **complete analytical data warehousing solution** for **LLM (Large Language Model) evaluation data**. The goal is to centralize benchmark results, enable multidimensional analysis, and support data-driven decisions regarding **model performance**, **resource consumption**, and **environmental sustainability**.
 
 ---
 
-## 🧰 Technology Stack  
+## Technology Stack  
 
 | Layer     | Technology         |
 |--------   |--------------------|
@@ -16,11 +16,11 @@ This project leverages the **Microsoft BI stack (SQL Server, SSIS, SSAS, Power B
 
 ---
 
-## 🎯 Analytical Objective  
+## Analytical Objective  
 
 The objective is to **benchmark and analyse LLM performance versus cost and environmental impact**, using KPIs that can be explored **across multiple analytical dimensions**.
 
-### 📈 Core KPIs  
+### Core KPIs  
 
 | Metric            | Description                                    |
 |-------------------|------------------------------------------------|
@@ -28,7 +28,7 @@ The objective is to **benchmark and analyse LLM performance versus cost and envi
 | **Params (M)**    | Total model parameter count                    |
 | **CO₂ Cost (kg)** | Estimated carbon emissions                     |
 
-### 🧩 Required Analytical Slicing Dimensions  
+### Required Analytical Slicing Dimensions  
 The cube must support slicing, filtering, and drill-down across **three perspectives**:
 
 1. **Time** — Day → Month → Quarter → Year  
@@ -37,7 +37,7 @@ The cube must support slicing, filtering, and drill-down across **three perspect
 
 ---
 
-## 🗄️ Data Modeling  
+## Data Modeling  
 
 This project employs a **classic dimensional modeling approach**:  
 
@@ -48,13 +48,13 @@ This project employs a **classic dimensional modeling approach**:
 
 ---
 
-## 🔁 ETL Architecture (SSIS)
+## ETL Architecture (SSIS)
 
 
-1️⃣ **High-Level ETL Flow — conceptual data movement**
+1- **High-Level ETL Flow — conceptual data movement**
 ![HighLevelETL](./Misc/control_flow.jpg)
 
-2️⃣ **BenchmarkDim**
+2- **BenchmarkDim**
 
 ![BenchmarkDim](./Misc/dim_benchmark.jpg)
 
@@ -69,9 +69,9 @@ This project employs a **classic dimensional modeling approach**:
 
 ---
 
-## 🧮 OLAP Cube Architecture (SSAS)
+## OLAP Cube Architecture (SSAS)
 
-### 📊 Dimension Design  
+### Dimension Design  
 
 | Dimension     | Key Elements                            |
 |---------------|-----------------------------------------|
@@ -79,7 +79,7 @@ This project employs a **classic dimensional modeling approach**:
 | **Model**     | Surrogate ModelKey + attributes         |
 | **Benchmark** | Category → BenchmarkName                |
 
-### 🧩 Measures & Calculation Logic  
+### Measures & Calculation Logic  
 
 | Measure              | Formula                        | Aggregation |
 |----------------------|--------------------------------|-------------|
@@ -89,20 +89,12 @@ This project employs a **classic dimensional modeling approach**:
 
 ---
 
-## 📊 Dashboard Overview  
+## Dashboard Overview  
 A Power BI dashboard is built to explore model performance, cost, and trade-offs interactively.
 
 ![Dashboard](./Misc/dashboard.jpg)
 
-Recommended views:
-- Eval Value vs CO₂ Cost correlation  
-- Model size heatmap  
-- Time-series evolution of benchmark performance  
-- Architecture-based comparison slicer  
-
----
-
-## 🔍 Main Insights  
+## Main Insights  
 
 **High-accuracy models (Eval Value > 600) often incur 2–3× more CO₂ than mid-range models**, suggesting diminishing returns at the high end.  
 
